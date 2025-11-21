@@ -75,7 +75,11 @@ public class CRUDplus{
                     System.out.print("Has eliminado el producto de la clave:" + clave);
 
                 break;
+                case 3:
+
                 
+
+                break;
                 case 7:
 
                     System.out.println("     --PRDODUCTOS --      ");

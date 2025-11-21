@@ -10,6 +10,40 @@ public class CLista {
         tamano = 0;
     }
 
+/*     void actualizar(String clave){
+        
+        CNodoProducto actual = primero; 
+        if (tamano == 0)
+        {
+            System.out.println("No hay qué actualizar...");
+            return;
+
+        } else if(tamano == 1){ 
+            
+            if(actual.clave.equals(clave)){
+            
+            
+            System.out.println("Producto encontrado! ¿qué atributo deseas actualizar?");
+            System.out.println("1. Descripción");
+            System.out.println("2. Precio");
+            System.out.println("3. Stock");
+
+            switch (opcion) {
+
+            }else{
+                System.out.println("No está el objeto");
+            } 
+
+        } else{
+
+            while(actual != null && !actual.clave.equals(clave)) {
+            actual = actual.sig;
+            }
+            
+        }
+    }
+}
+*/
     void eliminar(String clave) {
         
         CNodoProducto anterior = null;
