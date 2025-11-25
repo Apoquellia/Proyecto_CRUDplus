@@ -1,11 +1,11 @@
 package Proyecto_CRUDplus;
 
 public class CNodo {
-    CNodoProducto dato;
-    CNodo sig;
+    String clave;
+    protected CNodo sig;
 
-    CNodo(CNodoProducto dato) {
-        this.dato = dato;
+    CNodo(String clave) {
+        this.clave = clave;
         sig = null;
     } 
 }

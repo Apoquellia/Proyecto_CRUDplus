@@ -6,8 +6,8 @@ public class CRUDplus{
 
     public static void main(String[] args) {
         
-    CLista DATOS = new CLista();
-    CLista LOG = new CLista();
+    CListaProducto DATOS = new CListaProducto();
+    CColaLog LOG = new CColaLog();
 
     String clave;
 
@@ -45,15 +45,15 @@ public class CRUDplus{
                     String descripcion = entrada.nextLine();
                     
                     System.out.print("Precio:");
-                    String precio = entrada.nextLine();
+                    double precio = entrada.nextDouble();
                     
                     System.out.print("Stock:");
-                    String stock = entrada.nextLine();
+                    int stock = entrada.nextInt();
+                    entrada.nextLine();
 
             CNodoProducto n1 = new CNodoProducto(clave, descripcion, precio, stock);
 
-            DATOS.insertarUltimo(n1);
-
+            DATOS.insertar(n1, LOG);
                 
                     System.out.println("Datos guardados.");
                     
@@ -70,15 +70,29 @@ public class CRUDplus{
                     System.out.print("Clave:");
                     clave = entrada.nextLine();
 
-                DATOS.eliminar(clave);
+                DATOS.eliminar(clave, LOG);
 
                     System.out.print("Has eliminado el producto de la clave:" + clave);
 
                 break;
                 case 3:
 
-                
+                                System.out.println("");
+            System.out.println("===== EDITAR =====");
+            System.out.println("");        
+                    System.out.println("Por favor, ingresa la clave del producto que quieres editar");
+                    
+                    entrada.nextLine();
+                    
+                    System.out.print("Clave:");
+                    clave = entrada.nextLine();
 
+                DATOS.actualizar(clave, LOG);
+
+                    System.out.print("Has actualizado el producto de la clave:" + clave);
+
+                case 6:
+                LOG.imprimirLog();
                 break;
                 case 7:
 
