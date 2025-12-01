@@ -10,7 +10,6 @@ public class CColaLog {
         tamano = 0;
     }
 
-    // método EnQueue.
     void añadirRegistro(CNodoLog nodo) {
         nodo.sig = null;
         if (tamano == 0) {
@@ -31,7 +30,7 @@ public class CColaLog {
 
 public void imprimirLog() {
         if (isEmpty()) {
-            System.out.println("Bitácora vacía.");
+            System.out.println("Log vacío.");
             return;
         }
 
