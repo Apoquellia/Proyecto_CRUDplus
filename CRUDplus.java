@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class CRUDplus{
 
     public static void main(String[] args) {
-        
+
     CListaProducto DATOS = new CListaProducto();
     CColaLog LOG = new CColaLog();
 
@@ -58,6 +58,7 @@ public class CRUDplus{
                     System.out.println("Datos guardados.");
                     
                 break;
+                
                 case 2:
 
                 System.out.println("");
@@ -72,9 +73,8 @@ public class CRUDplus{
 
                 DATOS.eliminar(clave, LOG);
 
-                    System.out.print("Has eliminado el producto de la clave:" + clave);
-
                 break;
+
                 case 3:
 
                                 System.out.println("");
@@ -90,10 +90,32 @@ public class CRUDplus{
                 DATOS.actualizar(clave, LOG);
 
                     System.out.print("Has actualizado el producto de la clave:" + clave);
+                
+                break;
+
+                case 4:
+
+                    System.out.println("");
+                    System.out.println("===== DESHACER =====");
+
+                    DATOS.deshacer(LOG);
+
+                break;
+
+                case 5:
+                    System.out.println("");
+                    System.out.println("===== REHACER =====");
+
+                    DATOS.rehacer(LOG);
+
+                break;
 
                 case 6:
+
                 LOG.imprimirLog();
+                
                 break;
+                
                 case 7:
 
                     System.out.println("     --PRDODUCTOS --      ");

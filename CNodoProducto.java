@@ -20,9 +20,10 @@ public class CNodoProducto {
         return new CNodoProducto(clave, descripcion, precio, stock);
     }
     
-    public void pegarDatos(CNodoProducto NodoRespaldo) {
-        this.descripcion = NodoRespaldo.descripcion;
-        this.precio = NodoRespaldo.precio;
-        this.stock = NodoRespaldo.stock;
+    public void pegarDatos(CNodoProducto respaldo) {
+        this.descripcion = respaldo.descripcion;
+        this.precio = respaldo.precio;
+        this.stock = respaldo.stock;
     }
 }
+

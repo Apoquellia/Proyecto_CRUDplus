@@ -17,3 +17,4 @@ public class CNodoLog {
         this.clave = clave;
     }
 }
+
